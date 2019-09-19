@@ -1,0 +1,23 @@
+Parte 3
+
+20. Con la acción get, en la url se puede observar el valor del Id. Mientras que con la acción post no se observa el valor del id ingresado.
+Otros métodos exitentes de petición son:
+	-Head: Se utiliza para obtener la información de un determinado recurso sin obtener el cuerpo del mismo
+	-Put:  Se utiliza para actualizar un recurso ya existente
+	-Delete: Se utiliza para borrar un recurso específico
+	-Patch: Se utiliza para para aplicar modificaciones momentaneas a un recurso
+	-Trace: Se utiliza para revisar la conectividad entre un cliente y un usuario Web mediante un bucle de retorno de mensaje
+	-Connect: Se utiliza para solicitar una conexión de tipo túnel TCP/IP
+	-Options: Se utliza para conocer que métodos HTTP soporta un determinado servidor Web 
+		  
+
+21. Se observa una tabla de "todos" obtenida mediante un ID proporcionado en el formulario anterior. 
+La clase Server cuenta con tres métodos:
+	-getTodo: Este método se usa para obtener un todo especifico mediante un ID dado. Esta clase primero obtiene la información de los "todos" mediante
+		  la url: "https://jsonplaceholder.typicode.com/todos/". Y, una vez obtenida la información, crea un objeto de tipo "todo" usando la clase 
+		  hecha por nosotros anteriormente
+	-todoToHTMLRow: Este es un método interno de la clase que le permite transformar los datos existentes dentro un "todo" dado en un String compatible
+			con la sintaxis que se usa para representar una fila de una tabla en html 
+	-todosToHTMLTable: Este es un método que se usa para obtener una String que tenga la sintaxis necesaria para formar una tabla en HTML. Este método 
+			   recibe como parametro una lista de "todos" que después transforma en una tabla con los datos de cada "todo perteneciente a la lista,
+			   para realizar este procedimiento, emplea el método "todoToHTMLRow" con cada uno de los "todos" de la lista
